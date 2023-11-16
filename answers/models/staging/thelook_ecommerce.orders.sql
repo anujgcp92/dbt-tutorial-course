@@ -1,7 +1,7 @@
 WITH source AS (
 	SELECT *
 
-	FROM {{ source('thelook_ecommerce', 'orders') }}
+	FROM {{ source('thelook_ecommerce', 'orders') }} limit 100
 )
 
 SELECT
@@ -23,4 +23,4 @@ SELECT
 		- gender
 	#}
 
-FROM source
+FROM source 
